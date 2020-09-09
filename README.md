@@ -1,24 +1,53 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+|  Column  |  Type  |   Option   |
+| -------- | ------ | ---------- |
+| nickname | string | null:false |
+|   email  | string | null:false |
+| password | string | null:false |  
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :user_books
+- has_many :books, though: user_books
+- has_many :memos
 
-* Configuration
+## booksテーブル
 
-* Database creation
+|  Column  |  Type  |   Option   |
+| -------- | ------ | ---------- |
+|  title   | string | null:false |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :user_books
+- has_many :users, though: user_books
+- has_many :memos
 
-* Services (job queues, cache servers, search engines, etc.)
+## user_booksテーブル
 
-* Deployment instructions
+|  Column  |    Type    |            Option             |
+| -------- | ---------- | ----------------------------- |
+|   user   | references | null:false, foreign_key: true |
+|   book   | references | null:false, foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :book
+
+## memosテーブル
+
+|  Column  |    Type    |            Option             |
+| -------- | ---------- | ----------------------------- |
+|   text   |    text    | null:false                    |
+|   user   | references | null:false, foreign_key: true |
+|   book   | references | null:false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :book
+- has_one_attached :image
