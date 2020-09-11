@@ -1,0 +1,25 @@
+.registraion-main {
+  width: 100%;
+  height: calc(100vh - 130px);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 30%;
+}
+
+.login-btn {
+  color: white;
+  background-color: #FF3333;
+  border: none;
+  padding: 10px;
+}
