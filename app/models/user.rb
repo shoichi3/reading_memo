@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :user_books
-  has_many :books, through: :user_books
+  # has_many :user_books
+  # has_many :books, through: :user_books
+  has_many :books
   has_many :memos
 
   validates :name, presence: true
