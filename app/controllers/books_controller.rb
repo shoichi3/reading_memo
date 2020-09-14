@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-  before_action :get_title, only: [:show, :edit, :update]
+  before_action :get_title, only: [:show, :edit, :update, :destroy]
 
   def new
     @book = Book.new
@@ -26,6 +26,14 @@ class BooksController < ApplicationController
       redirect_to book_path(@book)
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @book.destroy
+      redirect_to user_path(current_user)
+    else
+      render :show
     end
   end
 
