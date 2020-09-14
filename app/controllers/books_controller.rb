@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-  before_action :get_book, only: [:show]
+  before_action :get_title, only: [:show, :edit, :update]
 
   def new
     @book = Book.new
@@ -18,13 +18,24 @@ class BooksController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @book.update(book_params)
+      redirect_to book_path(@book)
+    else
+      render :new
+    end
+  end
+
   private
 
   def book_params
     params.require(:book).permit(:title).merge(user_id: current_user.id)
   end
 
-  def get_book
+  def get_title
     @book = Book.find(params[:id])
   end
 
