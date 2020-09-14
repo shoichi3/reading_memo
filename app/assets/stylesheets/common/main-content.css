@@ -1,0 +1,41 @@
+.main {
+  background-color: #EEEEEE;
+  height: 100vh;
+}
+
+.main-upper {
+  padding: 10px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.main-lower {
+  height: calc(100vh - 50px);
+}
+
+.book {
+  text-decoration: none;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book-title {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+
+.book-img {
+  height: 250px;
+  width: 250px;
+}
