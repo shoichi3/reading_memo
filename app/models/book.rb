@@ -4,5 +4,5 @@ class Book < ApplicationRecord
   has_many :users, through: :user_books
   has_many :memos
 
-  validate :title, presence: true
+  validates :title, presence: true
 end
