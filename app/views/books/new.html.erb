@@ -1,0 +1,19 @@
+<div class='add-book'>
+
+  <%# エラーメッセージの表示 %>
+  <%= render 'common/error-messages', model: f.object %>
+
+  <%#本のタイトル入力フォーム %>
+  <div class='main-content'>
+    <div class='heading'>
+      <div class='form-title'>
+        本の登録
+      </div>
+    </div>
+    <%= form_with model: @book, local: true, class: 'submit-form' do |form| %>
+      <%= form.label :本のタイトル, class: 'book-title-label' %>
+      <%= form.text_field :title, class: 'register-content', placeholder: '本のタイトルを入力してください' %>
+      <%= form.submit '本を登録', class: 'register-btn' %>
+    <% end %>
+  </div>
+</div>
