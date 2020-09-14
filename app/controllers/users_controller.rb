@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_action :get_current_user, only: [:show]
+
   def index
     if user_signed_in?
       redirect_to user_path(current_user.id)
@@ -6,5 +9,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    @books = @user.books
+  end
+
+  private
+
+  def get_current_user
+    @user = User.find(params[:id])
   end
 end
