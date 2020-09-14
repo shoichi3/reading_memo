@@ -1,3 +1,24 @@
+<%#マイページでの本一覧の表示 %>
+<% if @books.length != 0 %>
+<div class='main'>
+  <div class='main-upper'>
+    本一覧
+  </div>
+
+  <div class='main-lower'>
+    <ul class='book-list'>
+      <% @books.each do |book| %>
+        <li class='book'>
+          <%= link_to '#' do %>
+            <%= image_tag "/images/book-4878119_1920.png", class: "book-img" %>
+            <div class='book-title'><%= book.title %></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% else %>
 <%#本がない場合のダミー %>
 <div class='main'>
   <div class='main-upper'>
@@ -34,3 +55,4 @@
   </div>
 </div>
 <%#本がない場合のダミー %>
+<% end %>
