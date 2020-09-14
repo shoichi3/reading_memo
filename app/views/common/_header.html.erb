@@ -1,0 +1,41 @@
+<% if user_signed_in? %>
+<header class='my-page-header'>
+  <div class='search'>
+    <form class='search-form' action="#">
+      <input class='search-box' placeholder='本のタイトルを入力してください'>
+      <button class='search-btn'>
+        検索
+      </button>
+    </form>
+  </div>
+  <div class='guide'>
+    <%= link_to '本を追加する', "#", class:'left-side-header' %>
+    <div class='right-side-header'>
+      <ul>
+        <li class='user-name'>
+          <%= current_user.name %>
+        </li>
+        <li>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<% else %>
+<header class='top-page-header'>
+  <div class='guide'>
+    <%= link_to 'ReadingMemo', new_user_registration_path, class:'app-name' %>
+    <div class='top-right-side-header'>
+      <ul>
+        <li>
+          <%= link_to '新規登録', new_user_registration_path, class:'sign-up' %>
+        </li>
+        <li>
+          <%= link_to 'ログイン', new_user_session_path, class:'login' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<% end %>
