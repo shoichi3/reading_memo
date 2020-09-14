@@ -24,7 +24,7 @@
   </div>
   <ul class='more-lists hidden' id='pull-down'>
     <li>
-      <%= link_to 'タイトルの編集', '#' , class: 'list'%>
+      <%= link_to 'タイトルの編集', edit_book_path(@book) , class: 'list'%>
     </li>
     <li>
       <%= link_to '本の削除', '#', class: 'list', method: :delete %>
