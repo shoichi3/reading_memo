@@ -1,0 +1,45 @@
+<header class='my-page-header'>
+  <div class='search'>
+    <form class='search-form' action="#">
+      <input class='search-box' placeholder='検索したいワードを入力してください'>
+      <button class='search-btn'>
+        検索
+      </button>
+    </form>
+  </div>
+  <div class='guide'>
+    <div class='more'>
+      <span id='lists'><%= image_tag 'arrow_top.png' %></span>
+    </div>
+    <div class='right-side-header'>
+      <ul>
+        <li class='user-name'>
+          <%= current_user.name %>
+        </li>
+        <li>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ul class='more-lists hidden' id='pull-down'>
+    <li>
+      <%= link_to 'タイトルの編集', '#' , class: 'list'%>
+    </li>
+    <li>
+      <%= link_to '本の削除', '#', class: 'list', method: :delete %>
+    </li>
+    <li>
+      <%= link_to 'メモの追加', '#', class: 'list' %>
+    </li>
+  </ul>
+</header>
+
+<div class='main'>
+  <div class='main-upper'>
+    <%= @book.title %>
+  </div>
+  <div class='main-lower'>
+  
+  </div>
+</div>

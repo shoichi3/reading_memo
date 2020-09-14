@@ -1,0 +1,39 @@
+.more {
+  width: 100px;
+}
+
+.more span {
+  background-color: skyblue;
+  display: block;
+  width: 25px;
+}
+
+.more span img {
+  width: 25px;
+}
+
+.more-lists {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 400px;
+  background-color: white;
+}
+
+.more-lists li {
+  padding: 5px;
+  border-bottom: 1px solid gray;
+  width: 130px;
+}
+
+.list {
+  text-decoration: none;
+  display: block;
+  color: black;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+

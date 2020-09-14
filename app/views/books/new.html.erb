@@ -1,7 +1,5 @@
 <div class='add-book'>
-
-
-  <%#本のタイトル入力フォーム %>
+   <%#本のタイトル入力フォーム %>
   <div class='main-content'>
     <div class='heading'>
       <div class='form-title'>
@@ -12,7 +10,7 @@
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
       <%= f.label :本のタイトル, class: 'book-title-label' %>
-      <%= f.text_field :title, class: 'register-content', placeholder: '本のタイトルを入力してください' %>
+      <%= f.text_field :title, class: 'register-content', placeholder: '本のタイトルを入力してください', maxlength: 30 %>
       <%= f.submit '本を登録', class: 'register-btn' %>
     <% end %>
   </div>
