@@ -1,7 +1,7 @@
 class MemosController < ApplicationController
 
-  before_action :get_book, only: [:new, :create, :show, :edit, :update]
-  before_action :get_memo, only: [:show, :edit, :update]
+  before_action :get_book, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :get_memo, only: [:show, :edit, :update, :destroy]
 
   def new
     @book = Book.find(params[:book_id])
@@ -28,6 +28,14 @@ class MemosController < ApplicationController
       redirect_to book_memo_path(@book, @memo)
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @memo.destroy
+      redirect_to book_path(@book)
+    else
+      render :show
     end
   end
 
