@@ -1,0 +1,56 @@
+.add-memo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.add-memo-form {
+  width: 40%;
+  height: 60%;
+  padding: 40px 120px;
+  border: 1px solid black;
+}
+
+.memo-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 70%;
+}
+
+.img-upload {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.a {
+  width: 100%;
+  margin: 10px 0 5px 70px;
+}
+
+.memo-label {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  width: 500px;
+  text-align: left;
+}
+
+.memo-text {
+  width: 490px;
+  padding-left: 10px;
+}
+
+.memo-register-btn {
+  color: white;
+  background-color: #FF3333;
+  border: none;
+  padding: 10px;
+  margin-top: 30px;
+}

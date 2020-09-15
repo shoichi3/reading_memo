@@ -44,7 +44,7 @@
     <ul class='memo-list'>
     <% @memos.each do |memo| %>
       <li class='memo'>
-        <%= link_to memo_path(memo) do %>
+        <%= link_to book_memo_path(@book, memo) do %>
           <% if memo.image.attached? %>
             <%= image_tag memo.image, class: "memo-img" %>
           <% end %>
