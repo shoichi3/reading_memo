@@ -1,7 +1,7 @@
 class Memo < ApplicationRecord
 
-  has_many :user
-  has_many :book
+  belongs_to :user
+  belongs_to :book
   has_one_attached :image
 
   validates :memo, presence: true
