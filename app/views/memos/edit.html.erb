@@ -3,10 +3,10 @@
   <div class='add-memo-form'>
     <div class='heading'>
       <div class='form-title'>
-        メモの登録
+        メモの編集
       </div>
     </div>
-    <%= form_with model: @memo, local: true, class: 'memo-form' do |f| %>
+    <%= form_with model: [@book, @memo], local: true, class: 'memo-form' do |f| %>
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
       <div class="img-upload">
@@ -23,7 +23,7 @@
         <span class="required">必須</span>
       </div>
       <%= f.text_area :memo, class: 'memo-text', placeholder: 'メモを入力してください', rows: 5 %>
-      <%= f.submit 'メモを登録', class: 'memo-register-btn' %>
+      <%= f.submit 'メモを編集', class: 'memo-register-btn' %>
     <% end %>
   </div>
 </div>
