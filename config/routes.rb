@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :books do
     resources :memos, only: [:new, :create]
   end
+  resources :memos, only: [:show]
 end
