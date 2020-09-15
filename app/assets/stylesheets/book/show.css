@@ -37,3 +37,30 @@
   display: none;
 }
 
+.memo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.memo {
+  text-decoration: none;
+  padding: 0 20px;
+  height: 100%;
+  padding-top: 10px;
+  border: 1px solid black;
+}
+
+
+.memo-content {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.memo-img {
+  height: 60%;
+  width: 400px;
+}
