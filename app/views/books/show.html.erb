@@ -30,7 +30,7 @@
       <%= link_to '本の削除', book_path(@book), class: 'list', method: :delete %>
     </li>
     <li>
-      <%= link_to 'メモの追加', '#', class: 'list' %>
+      <%= link_to 'メモの追加', new_book_memo_path(@book), class: 'list' %>
     </li>
   </ul>
 </header>

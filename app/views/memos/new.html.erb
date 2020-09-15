@@ -1,0 +1,29 @@
+<div class='add-book'>
+   <%#メモ追加フォーム %>
+  <div class='main-content'>
+    <div class='heading'>
+      <div class='form-title'>
+        メモの追加
+      </div>
+    </div>
+    <%= form_with model: [@book,@memo], local: true, class: 'submit-form' do |f| %>
+      <%# エラーメッセージの表示 %>
+      <%#= render 'common/error-messages', model: f.object %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          出品画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+      <%= f.label :メモ, class: 'book-title-label' %>
+      <%= f.text_area :memo, class: 'register-content', placeholder: 'メモを入力してください' %>
+      <%= f.submit 'メモを追加', class: 'register-btn' %>
+    <% end %>
+  </div>
+</div>
