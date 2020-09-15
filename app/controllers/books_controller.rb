@@ -17,7 +17,7 @@ class BooksController < ApplicationController
 
   def show
     book = Book.find(params[:id])
-    @memos = book.memos
+    @memos = book.memos.order('created_at DESC')
   end
 
   def edit
