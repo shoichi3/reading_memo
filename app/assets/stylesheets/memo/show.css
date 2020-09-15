@@ -1,0 +1,41 @@
+.memo-page-header {
+  height: 50px;
+}
+
+.guide-memo {
+  border: 1px solid green;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.edit {
+  text-decoration: none;
+  color: black;
+  margin-right: 35px;
+}
+
+.delete {
+  text-decoration: none;
+  color: black;
+}
+
+.sub-main {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 20px;
+}
+
+
+.detail-img {
+  width: 600px;
+  height: 480px;
+}
+
+.detail-memo {
+  font-size: 20px;
+}
