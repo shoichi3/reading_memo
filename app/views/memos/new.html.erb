@@ -8,7 +8,7 @@
     </div>
     <%= form_with model: [@book,@memo], local: true, class: 'submit-form' do |f| %>
       <%# エラーメッセージの表示 %>
-      <%#= render 'common/error-messages', model: f.object %>
+      <%= render 'common/error-messages', model: f.object %>
       <div class="img-upload">
         <div class="weight-bold-text">
           出品画像
