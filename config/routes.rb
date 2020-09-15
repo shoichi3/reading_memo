@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :books, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :books do
-    resources :memos, only: [:new, :create, :show, :edit, :update]
+    resources :memos, only: [:new, :create, :show, :edit, :update, :destroy]
   end
 end
