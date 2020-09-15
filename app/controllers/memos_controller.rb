@@ -1,6 +1,7 @@
 class MemosController < ApplicationController
 
   before_action :get_book, only: [:new, :create]
+  before_action :get_memo, only: [:show]
 
   def new
     @book = Book.find(params[:book_id])
@@ -16,6 +17,9 @@ class MemosController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def memo_params
@@ -25,4 +29,9 @@ class MemosController < ApplicationController
   def get_book
     @book = Book.find(params[:book_id])
   end
+
+  def get_memo
+    @memo = Memo.find(params[:id])
+  end
+
 end
