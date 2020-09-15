@@ -6,7 +6,7 @@
         メモの登録
       </div>
     </div>
-    <%= form_with model: @memo, local: true, class: 'memo-form' do |f| %>
+    <%= form_with model: [@book, @memo], local: true, class: 'memo-form' do |f| %>
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
       <div class="img-upload">
