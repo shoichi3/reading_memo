@@ -6,7 +6,7 @@
           <%= link_to '編集', edit_book_memo_path(@book, @memo), class:'edit' %>
         </li>
         <li>
-          <%= link_to '削除', '#', class:'delete', method: :delete %>
+          <%= link_to '削除', book_memo_path(@book, @memo), class:'delete', method: :delete %>
         </li>
       </ul>
     </div>
