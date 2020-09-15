@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_14_051553) do
+ActiveRecord::Schema.define(version: 2020_09_15_001440) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 2020_09_14_051553) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "memos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "memo", null: false
+    t.bigint "user_id"
+    t.bigint "book_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_memos_on_book_id"
+    t.index ["user_id"], name: "index_memos_on_user_id"
   end
 
   create_table "user_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,6 +53,8 @@ ActiveRecord::Schema.define(version: 2020_09_14_051553) do
   end
 
   add_foreign_key "books", "users"
+  add_foreign_key "memos", "books"
+  add_foreign_key "memos", "users"
   add_foreign_key "user_books", "books"
   add_foreign_key "user_books", "users"
 end
