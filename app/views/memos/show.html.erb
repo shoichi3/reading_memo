@@ -1,0 +1,36 @@
+<header class='memo-page-header'>
+  <div class='guide-memo'>
+    <div class='left-side-header'>
+      <ul class='nav'>
+        <li>
+          <%= link_to '編集', '#', class:'edit' %>
+        </li>
+        <li>
+          <%= link_to '削除', '#', class:'delete', method: :delete %>
+        </li>
+      </ul>
+    </div>
+    <div class='right-side-header'>
+      <ul>
+        <li class='user-name'>
+          <%= current_user.name %>
+        </li>
+        <li>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</header>
+
+<div class='main'>
+  <div class='sub-main'>
+    <div class='detail'>
+      <% if @memo.image.attached? %>
+        <%= image_tag @memo.image, class:'detail-img'%>
+      <% end %>
+      <div class='detail-memo'><%= @memo.memo %></div>
+    </div>
+  </div>
+</div>
