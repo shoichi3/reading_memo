@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
 
-  before_action :get_book, only: [:new]
+  before_action :get_book, only: [:new, :create]
 
   def new
     @book = Book.find(params[:book_id])
@@ -12,7 +12,7 @@ class MemosController < ApplicationController
     if @memo.save
       redirect_to book_path(@memo.book)
     else
-      render :new
+      render "memos/new"
     end
   end
 

@@ -16,6 +16,8 @@ class BooksController < ApplicationController
   end
 
   def show
+    book = Book.find(params[:id])
+    @memos = book.memos
   end
 
   def edit
