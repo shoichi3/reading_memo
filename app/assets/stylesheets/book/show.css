@@ -1,4 +1,4 @@
-.more {
+/* .more {
   width: 100px;
 }
 
@@ -35,6 +35,23 @@
 
 .hidden {
   display: none;
+} */
+
+.edit-title {
+  text-decoration: none;
+  color: black;
+  margin-right: 16px;
+}
+
+.delete-book {
+  text-decoration: none;
+  color: black;
+  margin-right: 16px;
+}
+
+.add-memo-btn {
+  text-decoration: none;
+  color: black;
 }
 
 .current-user {

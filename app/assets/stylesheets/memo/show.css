@@ -1,26 +1,19 @@
-.memo-page-header {
-  height: 50px;
-}
-
-.guide-memo {
-  border: 1px solid green;
-  width: 70%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.edit {
+.memo-index {
   text-decoration: none;
   color: black;
-  margin-right: 35px;
+  margin-right: 16px;
 }
 
-.delete {
+.edit-memo {
   text-decoration: none;
   color: black;
+  margin-right: 16px;
+}
+
+.delete-memo {
+  text-decoration: none;
+  color: black;
+  margin-right: 16px;
 }
 
 .sub-main {

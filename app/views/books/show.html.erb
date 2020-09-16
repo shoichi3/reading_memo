@@ -1,5 +1,6 @@
 <header class='my-page-header'>
   <div class='search'>
+    <div class='app-title'>ReadingMemo</div>
     <form class='search-form' action="#">
       <input class='search-box' placeholder='検索したいワードを入力してください'>
       <button class='search-btn'>
@@ -8,8 +9,14 @@
     </form>
   </div>
   <div class='guide'>
-    <div class='more'>
-      <span id='lists'><%= image_tag 'arrow_top.png' %></span>
+    <div class='left-side-header'>
+      <ul>
+        <li>
+          <%= link_to 'タイトルの編集', edit_book_path(@book) , class: 'edit-title'%>
+          <%= link_to '本の削除', book_path(@book), class: 'delete-book', method: :delete %>
+          <%= link_to 'メモの追加', new_book_memo_path(@book), class: 'add-memo-btn' %>
+        </li>
+      </ul>
     </div>
     <div class='right-side-header'>
       <ul>
@@ -22,17 +29,6 @@
       </ul>
     </div>
   </div>
-  <ul class='more-lists hidden' id='pull-down'>
-    <li>
-      <%= link_to 'タイトルの編集', edit_book_path(@book) , class: 'list'%>
-    </li>
-    <li>
-      <%= link_to '本の削除', book_path(@book), class: 'list', method: :delete %>
-    </li>
-    <li>
-      <%= link_to 'メモの追加', new_book_memo_path(@book), class: 'list' %>
-    </li>
-  </ul>
 </header>
 
 <% if @memos.length != 0 %>

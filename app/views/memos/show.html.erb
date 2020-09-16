@@ -1,19 +1,29 @@
-<header class='memo-page-header'>
-  <div class='guide-memo'>
-    <div class='left-side-header'>
-      <ul class='nav'>
+<header class='my-page-header'>
+  <div class='search'>
+    <div>
+      <%= link_to 'ReadingMemo', user_path(current_user), class:'app-title'%>
+    </div>
+    <form class='search-form' action="#">
+      <input class='search-box' placeholder='本のタイトルを入力してください'>
+      <button class='search-btn'>
+        検索
+      </button>
+    </form>
+  </div>
+  <div class='guide'>
+   <div class='left-side-header'>
+      <ul>
         <li>
-          <%= link_to '編集', edit_book_memo_path(@book, @memo), class:'edit' %>
-        </li>
-        <li>
-          <%= link_to '削除', book_memo_path(@book, @memo), class:'delete', method: :delete %>
+          <%= link_to 'メモ一覧', book_path(@book) , class: 'memo-index'%>
+          <%= link_to 'メモの編集', edit_book_memo_path(@book, @memo), class: 'edit-memo' %>
+          <%= link_to 'メモの削除', book_memo_path(@book, @memo), class: 'delete-memo', method: :delete %>
         </li>
       </ul>
     </div>
     <div class='right-side-header'>
       <ul>
         <li class='user-name'>
-          <%= current_user.name %>
+          <%= link_to current_user.name, user_path(current_user), class:'current-user' %>
         </li>
         <li>
           <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
