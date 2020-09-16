@@ -32,7 +32,7 @@
   <div class='sub-main'>
     <div class='detail'>
       <% if @memo.image.attached? %>
-        <%= image_tag @memo.image, class:'detail-img'%>
+        <%= image_tag @memo.image.variant(resize: '600x600'), class:'detail-img'%>
       <% end %>
       <div class='detail-memo'><%= @memo.memo %></div>
     </div>

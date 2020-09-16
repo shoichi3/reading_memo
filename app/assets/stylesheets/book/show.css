@@ -46,12 +46,12 @@
 .delete-book {
   text-decoration: none;
   color: black;
-  margin-right: 16px;
 }
 
 .add-memo-btn {
   text-decoration: none;
   color: black;
+  margin-right: 16px;
 }
 
 .current-user {
@@ -71,7 +71,7 @@
 .memo {
   text-decoration: none;
   padding: 0 20px;
-  height: 100%;
+  height: 80%;
   padding-top: 10px;
   border: 1px solid black;
 }
@@ -82,9 +82,4 @@
   color: black;
   font-size: 15px;
   word-wrap: break-word;
-}
-
-.memo-img {
-  height: 60%;
-  width: 400px;
 }

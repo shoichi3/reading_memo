@@ -9,7 +9,7 @@
     <ul class='book-list'>
       <% @books.each do |book| %>
         <li class='book'>
-          <%= link_to book_path(book) do %>
+          <%= link_to book_path(book), class:'book-link' do %>
             <%= image_tag "/images/book-4878119_1920.png", class: "book-img" %>
             <div class='book-title'><%= book.title %></div>
           <% end %>
