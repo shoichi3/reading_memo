@@ -12,9 +12,9 @@
     <div class='left-side-header'>
       <ul>
         <li>
-          <%= link_to 'タイトルの編集', edit_book_path(@book) , class: 'edit-title'%>
-          <%= link_to '本の削除', book_path(@book), class: 'delete-book', method: :delete %>
           <%= link_to 'メモの追加', new_book_memo_path(@book), class: 'add-memo-btn' %>
+          <%= link_to '本の編集', edit_book_path(@book) , class: 'edit-title'%>
+          <%= link_to '本の削除', book_path(@book), class: 'delete-book', method: :delete %>
         </li>
       </ul>
     </div>
@@ -42,7 +42,7 @@
       <li class='memo'>
         <%= link_to book_memo_path(@book, memo) do %>
           <% if memo.image.attached? %>
-            <%= image_tag memo.image, class: "memo-img" %>
+            <%= image_tag memo.image.variant(resize: '250x500'), class: "memo-img" %>
           <% end %>
           <div class='memo-content'><%= memo.memo %></div>
         <% end %>
