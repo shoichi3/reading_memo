@@ -47,6 +47,10 @@
       </li>
     <% end %>
     </ul>
+    <%# ページネーションの追加 %>
+    <div class='paginate'>
+      <%= paginate @memos %>
+    </div>
   </div>
 </div>
 <% else %>
