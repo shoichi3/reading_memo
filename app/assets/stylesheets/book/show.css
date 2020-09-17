@@ -83,3 +83,8 @@
   font-size: 15px;
   word-wrap: break-word;
 }
+
+.memo-img {
+  width: 300px;
+  height: 400px;
+}
