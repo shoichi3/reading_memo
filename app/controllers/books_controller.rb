@@ -17,7 +17,7 @@ class BooksController < ApplicationController
 
   def show
     book = Book.find(params[:id])
-    @memos = book.memos.order('created_at DESC')
+    @memos = @book.memos.order('created_at DESC')
   end
 
   def edit
@@ -37,6 +37,11 @@ class BooksController < ApplicationController
     else
       render :show
     end
+  end
+
+  def search
+    @user = User.find(params[:id])
+    @books = Book.search(params[:keyword], @user)
   end
 
   private
