@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @books = @user.books
+    @books = @user.books.page(params[:page]).per(8)
   end
 
   private

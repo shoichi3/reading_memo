@@ -41,7 +41,7 @@ class MemosController < ApplicationController
 
   def search
     @book = Book.find(params[:id])
-    @memos = Memo.search(params[:keyword], @book)
+    @memos = Memo.search(params[:keyword], @book).page(params[:page]).per(3)
   end
 
   private
