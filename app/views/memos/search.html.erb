@@ -29,7 +29,6 @@
   </div>
 </header>
 
-<% if @memos.length != 0 %>
 <div class='main'>
   <div class='main-upper'>
     <%= @book.title %>
@@ -49,22 +48,3 @@
     </ul>
   </div>
 </div>
-<% else %>
-<div class='main'>
-  <div class='main-upper'>
-    メモを追加しよう!
-  </div>
-  <div class='main-lower'>
-    <ul class='memo-list'>
-    <% 3.times do %>
-      <li class='memo'>
-        <%= link_to '#' do %>
-          <%= image_tag '/images/book-4878119_1920.png', class: 'memo-img' %>
-          <div class='memo-content'>memo</div>
-        <% end %>
-      </li>
-    <% end %>
-    </ul>
-  </div>
-</div>
-<% end %>
