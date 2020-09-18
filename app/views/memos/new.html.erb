@@ -1,5 +1,32 @@
+<header class='my-page-header'>
+  <div class='search'>
+    <div class='app-title'>
+      ReadingMemo
+    </div>
+  </div>
+  <div class='guide'>
+   <div class='left-side-header'>
+      <ul>
+        <li>
+          <%= link_to 'メモ一覧', book_path(@book) , class: 'memo-index'%>
+        </li>
+      </ul>
+    </div>
+    <div class='right-side-header'>
+      <ul>
+        <li class='user-name'>
+          <%= current_user.name %>
+        </li>
+        <li>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<%#メモ追加フォーム %>
 <div class='add-memo'>
-   <%#メモ追加フォーム %>
   <div class='add-memo-form'>
     <div class='heading'>
       <div class='form-title'>
@@ -11,18 +38,18 @@
       <%= render 'common/error-messages', model: f.object %>
       <div class="img-upload">
         <div class="weight-bold-text">
-          画像の選択
+          画像
           <span class="required">必須</span>
         </div>
         <div class="click-upload">
           <%= f.file_field :image, id:"item-image" %>
         </div>
       </div>
-      <div class='a'>
+      <div class='label-cover'>
         <%= f.label :メモ, class: 'memo-label' %>
         <span class="required">必須</span>
       </div>
-      <%= f.text_area :memo, class: 'memo-text', placeholder: 'メモを入力してください', rows: 5 %>
+      <%= f.text_area :memo, class: 'memo-text', placeholder: 'メモを入力してください', rows: 8 %>
       <%= f.submit 'メモを登録', class: 'memo-register-btn' %>
     <% end %>
   </div>
