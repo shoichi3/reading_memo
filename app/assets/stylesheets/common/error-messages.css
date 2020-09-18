@@ -1,12 +1,16 @@
 .errors {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  padding: 8px;
 }
 
+.errors-lists {
+  flex-direction: column;
+  
+}
 
 .error-message {
   color: #FF3333;
   font-size: 17px;
   list-style: square;
+  width: 400px;
+  margin-left: 80px;
 }
