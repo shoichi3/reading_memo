@@ -73,16 +73,30 @@ ul {
 }
 
 .top-page-header {
-  height: 80px;
+  height: 50px;
+  border: 1px solid black;
+  padding: 0 320px;
+  background-color: #def7ff;
+}
+
+.top-header {
+  border: 1px solid green;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .sign-up {
   text-decoration: none;
   color: black;
+  font-size: 17px;
+  margin-right: 24px;
 }
 
-.login {
+.log-in {
   text-decoration: none;
   color: black;
-  padding: 0 73px;
+  font-size: 17px;
 }

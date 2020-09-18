@@ -1,0 +1,9 @@
+.top-comment {
+  height: 300px;
+  border: 1px solid black;
+  background-image: url(/images/read_book.jpg);
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
