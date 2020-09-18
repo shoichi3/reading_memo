@@ -1,29 +1,27 @@
 .registration-main {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background-color: #DDDDDD;
+  /* background-color: #DDDDDD; */
+  border-left: 1px solid black;
   display: flex;
   justify-content: center;
 }
 
 .form-wrap {
-  width: 50%;
+  width: 100%;
   background-color: white;
-  padding: 40px 0;
+  margin: 40px 80px;
+  padding: 16px 0;
 }
 
 .form-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 40px 40px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #EEEEEE;
+  height: 60px;
+  font-size: 34px;
 }
 
 .form-header-title {
   font-weight: bold;
-  font-size: 23px;
+  font-size: 34px;
 }
 
 .form-group {
@@ -32,8 +30,8 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  padding: 10px;
-  width: 50%;
+  padding: 8px;
+  width: 60%;
 }
 
 .form-text-wrap {
@@ -56,7 +54,8 @@
 .info-text {
   font-size: 14px;
   margin-top: 8px;
-  margin-right: 65px;
+  width: 100%;
+  text-align: left;
 }
 
 .required {
@@ -69,7 +68,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 30px auto 0;
+  margin: 24px auto 0;
   width: 30%;
 }
 

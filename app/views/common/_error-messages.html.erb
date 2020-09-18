@@ -1,6 +1,6 @@
 <% if model.errors.any? %>
 <div class='errors'>
-  <ul>
+  <ul class='errors-lists'>
     <% model.errors.full_messages.each do | message| %>
     <li class='error-message'><%= message %></li>
     <% end %>

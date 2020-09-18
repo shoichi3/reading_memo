@@ -1,6 +1,18 @@
-.registraion-main {
+.registration-sub {
+  width: 50%;
+  height: 100%;
+  /* background-color: #DDDDDD; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid black;
+}
+
+.login-wrap {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: 50%;
+  background-color: white;
+  margin: 40px 80px;
 }
 
 .form-header {
