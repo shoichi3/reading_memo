@@ -1,17 +1,29 @@
 .add-book {
   width: 100%;
   height: 100vh;
-  border: 1px solid black;
+  background-color: #DDDDDD;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.visit-my-page {
+  margin-bottom: 64px;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.read-memo {
+  color: black;
 }
 
 .main-content {
+  margin-top: 132px;
   width: 40%;
-  height: 35%;
-  padding: 40px 120px;
-  border: 1px solid black;
+  height: 50%;
+  padding: 40px 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.6);
 }
 
 .heading {
@@ -23,7 +35,7 @@
 }
 
 .form-title {
-  font-size: 35px;
+  font-size: 34px;
 }
 
 .submit-form {
@@ -31,21 +43,27 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid black;
-  height: 75%;
-  margin: 20px 0;
+  height: 210px;
 }
 
 .book-title-label {
-  padding-bottom: 15px;
-  font-size: 20px;
-  width: 400px;
-  text-align: left;
+  padding-bottom: 8px;
+  font-size: 17px;
+  margin-right: 8px;
+  margin-left: 28px;
 }
 
 .register-content {
   margin-bottom: 15px;
   padding: 10px 0;
   padding-left: 5px;
-  width: 400px;
+  width: 360px;
+}
+
+.book-register {
+  color: white;
+  background-color: #FF3333;
+  border: none;
+  padding: 10px;
+  margin-top: 24px;
 }

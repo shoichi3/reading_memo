@@ -1,13 +1,9 @@
 .my-page-header {
   height: 100px;
-  border: 1px solid black;
   padding: 0 320px;
-  background-color: #def7ff;
 }
 
 .search {
-  border: 1px solid red;
-  /* width: 70%; */
   height: 50%;
   display: flex;
   justify-content: space-between;
@@ -42,8 +38,6 @@
 }
 
 .guide {
-  border: 1px solid green;
-  /* width: 70%; */
   height: 50%;
   display: flex;
   justify-content: space-between;
