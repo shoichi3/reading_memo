@@ -68,13 +68,10 @@ ul {
 
 .top-page-header {
   height: 50px;
-  border: 1px solid black;
   padding: 0 320px;
-  background-color: #def7ff;
 }
 
 .top-header {
-  border: 1px solid green;
   height: 100%;
   display: flex;
   justify-content: space-between;
