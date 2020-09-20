@@ -1,5 +1,34 @@
 <%= render 'common/header' %>
-<div class='top-comment'>
-  より良い読書のためのメモ管理アプリ<br>
-  一冊の本に関するメモを一元管理できます
+<div class='index-upper-content'>
+  <div class='top-comment'>
+    <span>
+      より良い読書のためのメモ管理アプリ<br>
+    </span>
+    一冊の本に関するメモを一元管理できます
+  </div>
+</div>
+
+<div class='index-lower-content'>
+  <div class='index-main-lower'>
+    <ul class='index-book-list'>
+      <li class='index-book'>
+        <%= link_to '#' do %>
+          <%= image_tag "/images/book_cover_kawa.png", class: "index-book-img" %>
+          <div class='index-book-title'>Think clearly</div>
+        <% end %>
+      </li>
+      <li class='index-book'>
+        <%= link_to '#' do %>
+          <%= image_tag "/images/book_cover_kawa.png", class: "index-book-img" %>
+          <div class='index-book-title'>7つの習慣</div>
+        <% end %>
+      </li>
+      <li class='index-book'>
+        <%= link_to '#' do %>
+          <%= image_tag "/images/book_cover_kawa.png", class: "index-book-img" %>
+          <div class='index-book-title'>嫌われる勇気</div>
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </div>
