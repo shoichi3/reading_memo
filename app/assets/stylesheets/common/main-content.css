@@ -1,32 +1,28 @@
 .main {
-  background-color: #EEEEEE;
-  height: 100vh;
+  background-color: #f5f5f5;
+  min-height: 100%;
 }
 
 .main-upper {
-  padding: 10px;
-  height: 50px;
-  border: 1px solid black;
+  padding-top: 24px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 20px;
-}
-
-.main-lower {
-  height: calc(100vh - 50px);
-  margin-top: 16px;
-}
-
-.book {
-  padding: 0 24px 24px;
+  font-size: 30px;
 }
 
 .book-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: start;
+}
+
+.book {
+  padding: 32px 24px 24px;
+  width: 300px;
 }
 
 .book-link {
@@ -37,11 +33,13 @@
   text-align: center;
   color: black;
   font-size: 30px;
+  word-wrap: break-word;
 }
 
 .book-img {
   height: 250px;
   width: 250px;
+  filter: drop-shadow(2px 2px 6px black);
 }
 
 .paginate {

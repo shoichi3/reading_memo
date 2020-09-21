@@ -41,17 +41,20 @@
   text-decoration: none;
   color: black;
   margin-right: 16px;
+  font-size: 17px;
 }
 
 .delete-book {
   text-decoration: none;
   color: black;
+  font-size: 17px;
 }
 
 .add-memo-btn {
   text-decoration: none;
   color: black;
   margin-right: 16px;
+  font-size: 17px;
 }
 
 .current-user {
@@ -61,30 +64,36 @@
   font-weight: bold;
 }
 
+.main-lower {
+  height: calc(100% - 80px);
+}
+
 .memo-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: start;
   height: 85%;
+  padding-top: 24px;
 }
 
 .memo {
   text-decoration: none;
   padding: 0 20px;
-  /* height: 80%; */
-  padding-top: 10px;
-  border: 1px solid black;
+  width: 350px;
 }
 
 
 .memo-content {
   text-decoration: none;
   color: black;
-  font-size: 15px;
+  font-size: 17px;
+  padding-top: 16px;
   word-wrap: break-word;
 }
 
 .memo-img {
   width: 300px;
   height: 400px;
+  filter: drop-shadow(2px 2px 6px black);
 }

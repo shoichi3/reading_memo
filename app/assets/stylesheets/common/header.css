@@ -12,7 +12,7 @@
 }
 
 .app-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bolder;
   text-decoration: none;
   color: black;
@@ -59,11 +59,13 @@ ul {
   margin-left: 24px;
   text-decoration: none;
   color: black;
+  font-size: 17px;
 }
 
 .add-book-btn {
   text-decoration: none;
   color: black;
+  font-size: 17px;
 }
 
 .top-page-header {
