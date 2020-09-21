@@ -40,7 +40,7 @@
       <li class='memo'>
         <%= link_to book_memo_path(@book, memo) do %>
           <% if memo.image.attached? %>
-            <%= image_tag memo.image.variant(resize: '250x500'), class: "memo-img" %>
+            <%= image_tag memo.image, class: "memo-img" %>
           <% end %>
           <div class='memo-content'><%= memo.memo %></div>
         <% end %>
@@ -63,8 +63,8 @@
     <% 3.times do %>
       <li class='memo'>
         <%= link_to '#' do %>
-          <%= image_tag '/images/book-4878119_1920.png', class: 'memo-img' %>
-          <div class='memo-content'>memo</div>
+          <%= image_tag '/images/1491.jpg', class: 'memo-img' %>
+          <div class='memo-content'>メモを追加しよう</div>
         <% end %>
       </li>
     <% end %>

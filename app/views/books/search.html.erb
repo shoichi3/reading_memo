@@ -1,5 +1,4 @@
 <%= render 'common/header' %>
-<%#= render 'common/main-content' %>
 <div class='main'>
   <div class='main-upper'>
     本一覧
@@ -10,7 +9,7 @@
       <% @books.each do |book| %>
         <li class='book'>
           <%= link_to book_path(book), class:'book-link' do %>
-            <%= image_tag "/images/book-4878119_1920.png", class: "book-img" %>
+            <%= image_tag "/images/book_cover_kawa.png", class: "book-img" %>
             <div class='book-title'><%= book.title %></div>
           <% end %>
         </li>
