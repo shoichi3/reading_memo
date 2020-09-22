@@ -1,5 +1,6 @@
 class MemosController < ApplicationController
-
+  
+  before_action :check_login
   before_action :get_book, only: [:new, :create, :show, :edit, :update, :destroy]
   before_action :get_memo, only: [:show, :edit, :update, :destroy]
 
@@ -56,6 +57,12 @@ class MemosController < ApplicationController
 
   def get_memo
     @memo = Memo.find(params[:id])
+  end
+
+  def check_login
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 
 end
