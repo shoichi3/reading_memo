@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
-
+  
+  before_action :check_login
   before_action :get_title, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -52,6 +53,12 @@ class BooksController < ApplicationController
 
   def get_title
     @book = Book.find(params[:id])
+  end
+
+  def check_login
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 
 end
