@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :illustrations, only: :index
+  resources :norms, only: :index
+  resources :examples, only: :index
   devise_for :users
   root "users#index"
   resources :users, only: [:show]
