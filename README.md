@@ -4,23 +4,23 @@ ReadingMemo
 
 # アプリケーションの概要
 
-紙の本に関するメモをまとめるためのアプリケーションです。
+紙の本に関するメモをまとめるためのアプリケーションです。  
 本にメモを結びつけることでメモを探す手間を省略することができます。
 
 # URL
 
-https://reading-memo-app.herokuapp.com/
+https://175.41.211.1
 
 # Basic認証のID/PASS
 
-ID: admin
+ID: admin  
 PASS: 2222
 
 # テスト用アカウント
 
-名前: 田中太郎
-メールアドレス: tmeana@gmail.com
-パスワード: tyu59k
+名前: 田中太郎  
+メールアドレス: tmeana@gmail.com  
+パスワード: tyu59k  
 
 # 利用方法
 
@@ -33,9 +33,9 @@ PASS: 2222
 # 洗い出した要件
 
 ## ユーザー管理機能
-目的: ユーザーを管理するため。
-詳細: name、emailおよびpasswordの入力を求め、ユーザーを管理する。
-ユースケース: name、emailおよびpasswordを入力すると、サインインできる。また、ログインの場合はemailおよびpasswordを入力する。
+目的: ユーザーを管理するため。  
+詳細: name、emailおよびpasswordの入力を求め、ユーザーを管理する。  
+ユースケース: name、emailおよびpasswordを入力すると、サインインできる。また、ログインの場合はemailおよびpasswordを入力する。  
 
 ## マイページ機能
 目的: ユーザーが追加した本を一覧表示するため。
