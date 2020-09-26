@@ -1,0 +1,18 @@
+.label-cover {
+  width: 100%;
+  margin: 16px 0 8px 70px;
+}
+
+.book-title-label {
+  padding-bottom: 8px;
+  font-size: 17px;
+  margin-right: 8px;
+  margin-left: 28px;
+}
+
+.register-content {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  padding-left: 5px;
+  width: 360px;
+}

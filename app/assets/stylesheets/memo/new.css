@@ -21,36 +21,6 @@
   height: 70%;
 }
 
-.img-upload {
-  width: 500px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-
-.label-cover {
-  width: 100%;
-  margin: 16px 0 8px 70px;
-}
-
-.weight-bold-text {
-  font-size: 16px;
-  margin-left: 70px;
-}
-
-.memo-label {
-  margin-top: 5px;
-  padding-bottom: 5px;
-  font-size: 17px;
-  text-align: left;
-  margin-left: 32px;
-}
-
-.memo-text {
-  width: 360px;
-  padding: 10px 10px 0;
-}
-
 .memo-register-btn {
   color: white;
   background-color: #FF3333;

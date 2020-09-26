@@ -1,7 +1,12 @@
+.register-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
 .registration-main {
   width: 50%;
   height: 100%;
-  /* background-color: #DDDDDD; */
   border-left: 1px solid black;
   display: flex;
   justify-content: center;

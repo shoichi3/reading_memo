@@ -11,13 +11,6 @@
   margin: 0 auto;
 }
 
-.app-title {
-  font-size: 25px;
-  font-weight: bolder;
-  text-decoration: none;
-  color: black;
-}
-
 .search-form {
   width: 62%;
   height: 100%;
@@ -51,6 +44,13 @@ ul {
 }
 
 .user-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.current-user {
+  text-decoration: none;
+  color: black;
   font-size: 17px;
   font-weight: bold;
 }
