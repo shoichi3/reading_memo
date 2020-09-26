@@ -1,8 +1,6 @@
 <header class='my-page-header'>
   <div class='search'>
-    <div>
-      <%= link_to 'ReadingMemo', user_path(current_user), class:'app-title'%>
-    </div>
+    <%= render 'common/app-title' %>
   </div>
   <div class='guide'>
    <div class='left-side-header'>
@@ -14,16 +12,7 @@
         </li>
       </ul>
     </div>
-    <div class='right-side-header'>
-      <ul>
-        <li class='user-name'>
-          <%= link_to current_user.name, user_path(current_user), class:'current-user' %>
-        </li>
-        <li>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
-        </li>
-      </ul>
-    </div>
+    <%= render 'common/right-side-header' %>
   </div>
 </header>
 
