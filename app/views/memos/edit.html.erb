@@ -1,8 +1,6 @@
 <header class='my-page-header'>
   <div class='search'>
-    <div class='app-title'>
-      ReadingMemo
-    </div>
+    <%= render 'common/app-title' %>
   </div>
   <div class='guide'>
    <div class='left-side-header'>
@@ -12,16 +10,7 @@
         </li>
       </ul>
     </div>
-    <div class='right-side-header'>
-      <ul>
-        <li class='user-name'>
-          <%= current_user.name %>
-        </li>
-        <li>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
-        </li>
-      </ul>
-    </div>
+    <%= render 'common/right-side-header' %>
   </div>
 </header>
 
@@ -36,20 +25,7 @@
     <%= form_with model: [@book, @memo], local: true, class: 'memo-form' do |f| %>
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
-      <div class="img-upload">
-        <div class="weight-bold-text">
-          画像
-          <span class="required">必須</span>
-        </div>
-        <div class="click-upload">
-          <%= f.file_field :image, id:"item-image" %>
-        </div>
-      </div>
-      <div class='label-cover'>
-        <%= f.label :メモ, class: 'memo-label' %>
-        <span class="required">必須</span>
-      </div>
-      <%= f.text_area :memo, class: 'memo-text', placeholder: 'メモを入力してください', rows: 8 %>
+      <%= render 'common/memo-form', model: f %>
       <%= f.submit 'メモを編集', class: 'memo-register-btn' %>
     <% end %>
   </div>
