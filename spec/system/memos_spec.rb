@@ -32,7 +32,7 @@ RSpec.describe 'メモ追加機能', type: :system do
       expect(page).to have_content('メモの登録')
       image_path = Rails.root.join('app/assets/images/read_book.jpg')
       attach_file('memo[image]', image_path, make_visible: true)
-      fill_in 'memo_memo', with: ""
+      fill_in 'memo_memo', with: ''
       click_on 'メモを登録'
       expect(page).to have_content('メモの登録')
     end
@@ -70,9 +70,9 @@ RSpec.describe 'メモ編集機能', type: :system do
       expect(page).to have_content('メモの編集')
       click_on 'メモの編集'
       expect(page).to have_content('メモの編集')
-      fill_in 'memo_memo', with: ""
+      fill_in 'memo_memo', with: ''
       click_on 'メモを編集'
-      expect(page).to have_content("メモの編集")
+      expect(page).to have_content('メモの編集')
     end
     it 'サインインせずにメモを編集しようとすると、トップページへ遷移する' do
       visit edit_book_memo_path(1, 1)
@@ -92,9 +92,9 @@ RSpec.describe 'メモ削除機能', type: :system do
       add_memo(@memo)
       click_on @memo.memo
       expect(page).to have_content('メモの削除')
-      expect{
+      expect do
         click_on 'メモの削除'
-      }.to change{ Memo.count }.by(-1)
+      end.to change { Memo.count }.by(-1)
       expect(page).to have_no_content(@memo.memo)
     end
   end

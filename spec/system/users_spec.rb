@@ -14,13 +14,13 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       visit root_path
       expect(page).to have_content('新規登録')
       click_on '新規登録'
-      fill_in 'name', with: ""
+      fill_in 'name', with: ''
       fill_in 'email', with: @user.email
       fill_in 'password', with: @user.password
       fill_in 'password_confirmation', with: @user.password_confirmation
-      expect{
+      expect  do
         click_on 'Sign In'
-      }.to change{ User.count }.by(0)
+      end.to change { User.count }.by(0)
       expect(page).to have_content('Sign In')
     end
   end
@@ -46,7 +46,7 @@ RSpec.describe 'ログイン機能', type: :system do
       visit root_path
       expect(page).to have_content('ログイン')
       click_on 'ログイン'
-      fill_in 'email', with: ""
+      fill_in 'email', with: ''
       fill_in 'password', with: @user.password
       click_on 'Log In'
       expect(current_path).to eq new_user_session_path
@@ -55,24 +55,24 @@ RSpec.describe 'ログイン機能', type: :system do
 end
 
 RSpec.describe 'デモンストレーション機能', type: :system do
-  context '例に示した本のメモを閲覧することができるとき' do 
+  context '例に示した本のメモを閲覧することができるとき' do
     it 'Think clearlyをクリックするとメモを閲覧することができる' do
       visit root_path
-      expect(page).to have_content("Think clearly")
+      expect(page).to have_content('Think clearly')
       click_on 'Think clearly'
       expect(current_path).to eq examples_path
       expect(page).to have_content('Think clearly')
     end
     it '7つの習慣をクリックするとメモを閲覧することができる' do
       visit root_path
-      expect(page).to have_content("Think clearly")
+      expect(page).to have_content('Think clearly')
       click_on '7つの習慣'
       expect(current_path).to eq norms_path
       expect(page).to have_content('7つの習慣')
     end
     it '嫌われる勇気をクリックするとメモを閲覧することができる' do
       visit root_path
-      expect(page).to have_content("嫌われる勇気")
+      expect(page).to have_content('嫌われる勇気')
       click_on '嫌われる勇気'
       expect(current_path).to eq illustrations_path
       expect(page).to have_content('嫌われる勇気')

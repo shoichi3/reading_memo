@@ -1,5 +1,4 @@
 class BooksController < ApplicationController
-  
   before_action :check_login
   before_action :get_title, only: [:show, :edit, :update, :destroy]
 
@@ -56,9 +55,6 @@ class BooksController < ApplicationController
   end
 
   def check_login
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
-
 end

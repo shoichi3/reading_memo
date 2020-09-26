@@ -16,7 +16,7 @@ RSpec.describe Memo, type: :model do
       @memo.valid?
       expect(@memo.errors.full_messages).to include("Image can't be blank")
     end
-    
+
     it 'メモが空の場合、メモを追加することはできない' do
       @memo.memo = nil
       @memo.valid?

@@ -15,10 +15,10 @@ RSpec.describe '本追加機能', type: :system do
       sign_up(@book.user)
       click_on '本の追加'
       expect(current_path).to eq new_book_path
-      fill_in 'book_title', with: ""
-      expect{
+      fill_in 'book_title', with: ''
+      expect  do
         click_on '本を登録'
-      }.to change{ Book.count }.by(0)
+      end.to change { Book.count }.by(0)
       expect(current_path).to eq books_path
     end
     it 'サインインせずに本を追加しようとすると、トップページへ遷移する' do
@@ -39,7 +39,7 @@ RSpec.describe '本編集機能', type: :system do
       click_on @book.title
       expect(page).to have_content('本の編集')
       click_on '本の編集'
-      expect(page).to have_content('タイトルの編集') 
+      expect(page).to have_content('タイトルの編集')
       fill_in 'book_title', with: "#{@book.title} + 編集した内容"
       click_on '本を編集'
       expect(page).to have_content("#{@book.title} + 編集した内容")
@@ -52,8 +52,8 @@ RSpec.describe '本編集機能', type: :system do
       click_on @book.title
       expect(page).to have_content('本の編集')
       click_on '本の編集'
-      expect(page).to have_content('タイトルの編集') 
-      fill_in 'book_title', with: ""
+      expect(page).to have_content('タイトルの編集')
+      fill_in 'book_title', with: ''
       click_on '本を編集'
       expect(page).to have_content('タイトルの編集')
     end
@@ -74,15 +74,15 @@ RSpec.describe '本削除機能', type: :system do
       add_book(@book)
       click_on(@book.title)
       expect(page).to have_content('本の削除')
-      expect{
+      expect do
         click_on '本の削除'
-      }.to change{ Book.count }.by(-1)
+      end.to change { Book.count }.by(-1)
       expect(page).to have_content('本の追加')
     end
   end
   context '本を削除することができないとき' do
     it 'サインインせずに本の削除ページへ遷移しようとすると、トップページへ遷移する' do
-      visit book_path(1) 
+      visit book_path(1)
       expect(current_path).to eq root_path
     end
   end

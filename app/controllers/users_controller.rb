@@ -1,12 +1,9 @@
 class UsersController < ApplicationController
-
   before_action :check_login, only: :show
   before_action :get_current_user, only: [:show]
 
   def index
-    if user_signed_in?
-      redirect_to user_path(current_user.id)
-    end
+    redirect_to user_path(current_user.id) if user_signed_in?
   end
 
   def show
@@ -20,8 +17,6 @@ class UsersController < ApplicationController
   end
 
   def check_login
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
 end

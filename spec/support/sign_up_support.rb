@@ -7,9 +7,9 @@ module SignUpSupport
     fill_in 'email', with: user.email
     fill_in 'password', with: user.password
     fill_in 'password_confirmation', with: user.password_confirmation
-    expect{
+    expect  do
       click_on 'Sign In'
-    }.to change{ User.count }.by(1)
+    end.to change { User.count }.by(1)
     expect(page).to have_content(user.name)
   end
 end

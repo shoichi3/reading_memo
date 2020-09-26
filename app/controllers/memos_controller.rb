@@ -1,5 +1,4 @@
 class MemosController < ApplicationController
-  
   before_action :check_login
   before_action :get_book, only: [:new, :create, :show, :edit, :update, :destroy]
   before_action :get_memo, only: [:show, :edit, :update, :destroy]
@@ -14,7 +13,7 @@ class MemosController < ApplicationController
     if @memo.save
       redirect_to book_path(@memo.book)
     else
-      render "memos/new"
+      render 'memos/new'
     end
   end
 
@@ -60,9 +59,6 @@ class MemosController < ApplicationController
   end
 
   def check_login
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
-
 end
