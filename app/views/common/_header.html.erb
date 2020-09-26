@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 <header class='my-page-header'>
   <div class='search'>
-    <div class='app-title'>ReadingMemo</div>
+    <%= render 'common/app-title' %>
     <%= form_with(url: search_book_path(@user), method: :get, class:'search-form', local: true) do |f|%>
       <%= f.text_field :keyword, placeholder:'本のタイトルを入力してください', class:'search-box' %>
       <%= f.submit '検索', class:'search-btn' %>
@@ -9,22 +9,13 @@
   </div>
   <div class='guide'>
     <%= link_to '本の追加', new_book_path, class:'add-book-btn' %>
-    <div class='right-side-header'>
-      <ul>
-        <li class='user-name'>
-          <%= link_to current_user.name, user_path(current_user.id), class:'current-user'%>
-        </li>
-        <li>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
-        </li>
-      </ul>
-    </div>
+    <%= render 'common/right-side-header' %>
   </div>
 </header>
 <% else %>
 <header class='top-page-header'>
   <div class='top-header'>
-    <%= link_to 'ReadingMemo', root_path, class:'app-title' %>
+    <%= render 'common/app-title' %>
     <div class='top-right-side-header'>
       <ul>
         <li>
