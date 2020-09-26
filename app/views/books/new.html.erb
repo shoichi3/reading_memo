@@ -1,7 +1,9 @@
 <header class='my-page-header'>
+  <%# ヘッダー上部 %>
   <div class='search'>
     <%= render 'common/app-title' %>
   </div>
+  <%# ヘッダー下部 %>
   <div class='guide'>
    <div class='left-side-header'>
       <ul>
@@ -22,6 +24,7 @@
     </div>
   </div>
 </header>
+
 <%#本のタイトル入力フォーム %>
 <div class='add-book'>
   <div class='main-content'>
@@ -33,6 +36,7 @@
     <%= form_with model: @book, local: true, class: 'submit-form' do |f| %>
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
+      
       <%= render 'common/book-form', model: f %>
       <%= f.submit '本を登録', class: 'book-register' %>
     <% end %>

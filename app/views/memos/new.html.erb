@@ -1,7 +1,9 @@
 <header class='my-page-header'>
+  <%# ヘッダー上部 %>
   <div class='search'>
     <%= render 'common/app-title' %>
   </div>
+  <%# ヘッダー下部 %>
   <div class='guide'>
    <div class='left-side-header'>
       <ul>
@@ -25,6 +27,7 @@
     <%= form_with model: [@book, @memo], local: true, class: 'memo-form' do |f| %>
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
+
       <%= render 'common/memo-form', model: f %>
       <%= f.submit 'メモを登録', class: 'memo-register-btn' %>
     <% end %>

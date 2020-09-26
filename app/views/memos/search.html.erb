@@ -1,8 +1,10 @@
 <header class='my-page-header'>
+  <%# ヘッダー上部 %>
   <div class='search'>
     <%= render 'common/app-title' %>
     <%= render 'common/search-memo' %>
   </div>
+  <%# ヘッダー下部 %>
   <div class='guide'>
     <div class='left-side-header'>
       <ul>
@@ -18,10 +20,12 @@
 </header>
 
 <div class='main'>
+  <%# 本のタイトル表示 %>
   <div class='main-upper'>
     <%= @book.title %>
   </div>
   <div class='main-lower'>
+    <%# メモ一覧表示 %>
     <ul class='memo-list'>
     <% @memos.each do |memo| %>
       <li class='memo'>
@@ -34,6 +38,8 @@
       </li>
     <% end %>
     </ul>
+
+    <%# ページネーション %>
     <div class='paginate'>
       <%= paginate @memos %>
     </div>

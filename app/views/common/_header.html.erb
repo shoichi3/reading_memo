@@ -1,3 +1,4 @@
+<%# サインインしているときのヘッダー %>
 <% if user_signed_in? %>
 <header class='my-page-header'>
   <div class='search'>
@@ -12,6 +13,7 @@
     <%= render 'common/right-side-header' %>
   </div>
 </header>
+<%# サインインしていないときのヘッダー %>
 <% else %>
 <header class='top-page-header'>
   <div class='top-header'>

@@ -3,8 +3,8 @@
   <div class='main-upper'>
     本一覧
   </div>
-
   <div class='main-lower'>
+    <%# 本一覧表示 %>
     <ul class='book-list'>
       <% @books.each do |book| %>
         <li class='book'>
@@ -15,7 +15,8 @@
         </li>
       <% end %>
     </ul>
-    <%# ページネーションの追加 %>
+
+    <%# ページネーション %>
     <div class='paginate'>
       <%= paginate @books %>
     </div>

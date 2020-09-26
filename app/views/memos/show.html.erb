@@ -1,7 +1,9 @@
 <header class='my-page-header'>
+  <%# ヘッダー上部 %>
   <div class='search'>
     <%= render 'common/app-title' %>
   </div>
+  <%# ヘッダー下部 %>
   <div class='guide'>
    <div class='left-side-header'>
       <ul>
@@ -17,6 +19,7 @@
 </header>
 
 <div class='main'>
+  <%# メモの表示 %>
   <div class='sub-main'>
     <div class='detail'>
       <% if @memo.image.attached? %>

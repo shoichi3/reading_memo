@@ -16,14 +16,14 @@
         </li>
       <% end %>
     </ul>
-    <%# ページネーションの追加 %>
+    <%# ページネーション %>
     <div class='paginate'>
       <%= paginate @books %>
     </div>
   </div>
 </div>
-<% else %>
 <%#本がない場合のダミー %>
+<% else %>
 <div class='main'>
   <div class='main-upper'>
     本を追加しよう!
@@ -41,5 +41,4 @@
     </ul>
   </div>
 </div>
-<%#本がない場合のダミー %>
 <% end %>
