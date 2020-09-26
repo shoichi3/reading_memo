@@ -1,0 +1,5 @@
+<div class='label-cover'>
+  <%= model.label :タイトル, class: 'book-title-label' %>
+  <span class="required">必須</span>
+</div>
+<%= model.text_field :title, class: 'register-content', placeholder: 'タイトルを入力してください', maxlength: 30 %>

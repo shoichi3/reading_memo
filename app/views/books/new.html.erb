@@ -1,8 +1,6 @@
 <header class='my-page-header'>
   <div class='search'>
-    <div class='app-title'>
-      ReadingMemo
-    </div>
+    <%= render 'common/app-title' %>
   </div>
   <div class='guide'>
    <div class='left-side-header'>
@@ -35,11 +33,7 @@
     <%= form_with model: @book, local: true, class: 'submit-form' do |f| %>
       <%# エラーメッセージの表示 %>
       <%= render 'common/error-messages', model: f.object %>
-      <div class='label-cover'>
-        <%= f.label :タイトル, class: 'book-title-label' %>
-        <span class="required">必須</span>
-      </div>
-      <%= f.text_field :title, class: 'register-content', placeholder: 'タイトルを入力してください', maxlength: 30 %>
+      <%= render 'common/book-form', model: f %>
       <%= f.submit '本を登録', class: 'book-register' %>
     <% end %>
   </div>
