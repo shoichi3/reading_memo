@@ -42,7 +42,7 @@ class BooksController < ApplicationController
 
   def search
     @user = User.find(params[:id])
-    @books = Book.search(params[:keyword], @user).page(params[:page]).per(8)
+    @books = SearchBooksService.search(params[:keyword], @user).page(params[:page]).per(8)
   end
 
   private
