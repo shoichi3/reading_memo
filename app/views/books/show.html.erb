@@ -1,10 +1,7 @@
 <header class='my-page-header'>
   <div class='search'>
     <%= render 'common/app-title' %>
-    <%= form_with url: search_memo_path(@book), local: true, method: :get, class:'search-form'  do |f|%>
-      <%= f.text_field :keyword, placeholder:'ワードを入力してください', class:'search-box' %>
-      <%= f.submit '検索', class:'search-btn' %>
-    <% end %>
+    <%= render 'common/search-memo' %>
   </div>
   <div class='guide'>
     <div class='left-side-header'>
@@ -19,7 +16,7 @@
     <%= render 'common/right-side-header' %>
   </div>
 </header>
-
+<%# メモ一覧表示 %>
 <% if @memos.length != 0 %>
 <div class='main'>
   <div class='main-upper'>
@@ -38,12 +35,13 @@
       </li>
     <% end %>
     </ul>
-    <%# ページネーションの追加 %>
+    <%# ページネーション %>
     <div class='paginate'>
       <%= paginate @memos %>
     </div>
   </div>
 </div>
+<%# メモが無いときのダミー %>
 <% else %>
 <div class='main'>
   <div class='main-upper'>
