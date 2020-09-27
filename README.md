@@ -22,7 +22,7 @@ http://175.41.211.1
 - RSpec
 
 # AWS構成図
-<img width="540" alt="スクリーンショット 2020-09-27 15 28 12" src="https://user-images.githubusercontent.com/69130053/94357813-03ffda80-00d7-11eb-97f8-86255b46ce0b.png">
+<img width="740" alt="スクリーンショット 2020-09-27 15 28 12" src="https://user-images.githubusercontent.com/69130053/94357813-03ffda80-00d7-11eb-97f8-86255b46ce0b.png">
 
 # 機能一覧
 
