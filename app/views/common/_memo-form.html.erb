@@ -1,14 +1,47 @@
-<div class="img-upload">
-  <div class="weight-bold-text">
-    画像
-    <span class="required">必須</span>
+<%# ヘッダー %>
+<header class='my-page-header'>
+  <div class='search'>
+    <%= render 'common/app-title' %>
   </div>
-  <div class="click-upload">
-    <%= model.file_field :image, id:"item-image" %>
+  <div class='guide'>
+   <div class='left-side-header'>
+      <ul>
+        <li>
+          <%= link_to "メモ#{info}", path , class: 'memo-index'%>
+        </li>
+      </ul>
+    </div>
+    <%= render 'common/right-side-header' %>
+  </div>
+</header>
+
+<%# メモ追加フォーム %>
+<div class='add-memo'>
+  <div class='add-memo-form'>
+    <div class='heading'>
+      <div class='form-title'>
+        <%= "メモの#{str}" %>
+      </div>
+    </div>
+    <%= form_with model: [@book, @memo], local: true, class: 'memo-form' do |f| %>
+      <%# エラーメッセージの表示 %>
+      <%= render 'common/error-messages', model: f.object %>
+      
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          画像
+          <span class="required">必須</span>
+        </div>
+        <div class="click-upload">
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+      <div class='label-cover'>
+        <%= f.label :メモ, class: 'memo-label' %>
+        <span class="required">必須</span>
+      </div>
+      <%= f.text_area :memo, class: 'memo-text', placeholder: 'メモを入力してください', rows: 8 %>
+      <%= f.submit "メモを#{str}", class: 'memo-register-btn' %>
+    <% end %>
   </div>
 </div>
-<div class='label-cover'>
-  <%= model.label :メモ, class: 'memo-label' %>
-  <span class="required">必須</span>
-</div>
-<%= model.text_area :memo, class: 'memo-text', placeholder: 'メモを入力してください', rows: 8 %>
