@@ -1,5 +1,47 @@
-<div class='label-cover'>
-  <%= model.label :タイトル, class: 'book-title-label' %>
-  <span class="required">必須</span>
+<%# ヘッダー %>
+<header class='my-page-header'>
+  <div class='search'>
+    <%= render 'common/app-title' %>
+  </div>
+  <div class='guide'>
+   <div class='left-side-header'>
+      <ul>
+        <li>
+          <%= link_to info, path , class: 'memo-index'%>
+        </li>
+      </ul>
+    </div>
+    <div class='right-side-header'>
+      <ul>
+        <li class='user-name'>
+          <%= link_to current_user.name, user_path(current_user.id), class:'current-user'%>
+        </li>
+        <li>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'logout' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<%#本のタイトル入力フォーム %>
+<div class='add-book'>
+  <div class='main-content'>
+    <div class='heading'>
+      <div class='form-title'>
+        <%= "タイトルの#{register}" %>
+      </div>
+    </div>
+    <%= form_with model: @book, local: true, class: 'submit-form' do |f| %>
+      <%# エラーメッセージの表示 %>
+      <%= render 'common/error-messages', model: f.object %>
+      
+      <div class='label-cover'>
+        <%= f.label :タイトル, class: 'book-title-label' %>
+        <span class="required">必須</span>
+      </div>
+      <%= f.text_field :title, class: 'register-content', placeholder: 'タイトルを入力してください', maxlength: 30 %>
+      <%= f.submit "本を#{register}", class: 'book-register' %>
+    <% end %>
+  </div>
 </div>
-<%= model.text_field :title, class: 'register-content', placeholder: 'タイトルを入力してください', maxlength: 30 %>
