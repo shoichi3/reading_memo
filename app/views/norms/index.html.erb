@@ -1,24 +1,2 @@
-<%= render 'common/header' %>
-
-<div class='main'>
-  <%# 本のタイトル %>
-  <div class='main-upper'>
-    7つの習慣
-  </div>
-  <div class='main-lower'>
-    <%# メモ一覧表示 %>
-    <ul class='memo-list'>
-      <li class='memo'>
-        <%= image_tag '/images/IMG_3066.jpeg', class: "memo-img" %>
-        <div class='memo-content'>主体的とは、自ら行動し、その行動によって生じた結果に対して責任を持つこと。
-        主体的というと自ら行動することを指すと思っていたが、責任も持たなければいけない。責任を持つことを意識するとより自由度が上昇すると思う。
-        </div>
-      </li>
-      <li class='memo'>
-        <%= image_tag '/images/IMG_3068.jpeg', class: "memo-img" %>
-        <div class='memo-content'>関心の輪と影響の輪というものを初めて知った。日常を振り返ると結構関心の輪のことを考えていた。これからは今考えていることがどっちなのか考えるようにする。
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
+<%= render 'common/examples', { title: "7つの習慣", comment1: "主体的とは、自ら行動し、その行動によって生じた結果に対して責任を持つこと。
+主体的というと自ら行動することを指すと思っていたが、責任も持たなければいけない。責任を持つことを意識するとより自由度が上昇すると思う。", comment2: "関心の輪と影響の輪というものを初めて知った。日常を振り返ると結構関心の輪のことを考えていた。これからは今考えていることがどっちなのか考えるようにする。", image1: 66, image2: 68} %>
