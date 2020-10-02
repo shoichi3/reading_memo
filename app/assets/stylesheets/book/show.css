@@ -1,17 +1,10 @@
-.edit-title {
-  text-decoration: none;
-  color: black;
-  margin-right: 16px;
-  font-size: 17px;
-}
-
 .delete-book {
   text-decoration: none;
   color: black;
   font-size: 17px;
 }
 
-.add-memo-btn {
+.common-btn {
   text-decoration: none;
   color: black;
   margin-right: 16px;
