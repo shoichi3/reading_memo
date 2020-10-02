@@ -2,9 +2,7 @@
 <%#マイページでの本一覧の表示 %>
 <% if @books.length != 0 %>
 <div class='main'>
-  <div class='main-upper'>
-    本一覧
-  </div>
+  <%= render 'common/book-title', { title: '本一覧'} %>
   <div class='main-lower'>
     <ul class='book-list'>
       <% @books.each do |book| %>
@@ -25,9 +23,7 @@
 <%#本がない場合のダミー %>
 <% else %>
 <div class='main'>
-  <div class='main-upper'>
-    本を追加しよう!
-  </div>
+  <%= render 'common/book-title', { title: '本を追加しよう!'} %>
   <div class='main-lower'>
     <ul class='book-list'>
     <% 8.times do %>

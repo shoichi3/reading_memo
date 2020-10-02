@@ -13,9 +13,7 @@
 <% if @memos.length != 0 %>
 <div class='main'>
   <%# 本のタイトル表示 %>
-  <div class='main-upper'>
-    <%= @book.title %>
-  </div>
+  <%= render 'common/book-title', { title: @book.title} %>
   <div class='main-lower'>
     <%# メモ一覧表示 %>
     <ul class='memo-list'>
@@ -41,9 +39,7 @@
 <% else %>
 <div class='main'>
   <%# 本のタイトル表示 %>
-  <div class='main-upper'>
-    <%= @book.title %>
-  </div>
+  <%= render 'common/book-title', { title: @book.title} %>
   <div class='main-lower'>
     <%# メモ一覧表示 %>
     <ul class='memo-list'>
