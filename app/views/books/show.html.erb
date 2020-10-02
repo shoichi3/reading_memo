@@ -6,15 +6,7 @@
   </div>
   <%# ヘッダー下部 %>
   <div class='guide'>
-    <div class='left-side-header'>
-      <ul>
-        <li>
-          <%= link_to 'メモの追加', new_book_memo_path(@book), class: 'add-memo-btn' %>
-          <%= link_to '本の編集', edit_book_path(@book) , class: 'edit-title'%>
-          <%= link_to '本の削除', book_path(@book), class: 'delete-book', method: :delete %>
-        </li>
-      </ul>
-    </div>
+    <%= render 'common/left-side-header', {info1: 'メモの追加', path1: new_book_memo_path(@book), info2: '本の編集', path2: edit_book_path(@book), info3: '本の削除', path3: book_path(@book)} %>
     <%= render 'common/right-side-header' %>
   </div>
 </header>
