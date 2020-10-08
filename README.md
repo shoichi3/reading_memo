@@ -14,7 +14,7 @@ http://175.41.211.1
 - rails 6.0.0
 - MySql 5.6.47
 - Nginx
-- Unicorn
+- docker
 - AWS
   - EC2
   - S3
@@ -22,7 +22,7 @@ http://175.41.211.1
 - RSpec
 
 # AWS構成図
-<img width="100%" alt="スクリーンショット 2020-09-27 15 28 12" src="https://user-images.githubusercontent.com/69130053/94357813-03ffda80-00d7-11eb-97f8-86255b46ce0b.png">
+<img width="652" alt="スクリーンショット 2020-10-08 10 54 51" src="https://user-images.githubusercontent.com/69130053/95406169-beec6b80-0954-11eb-98a3-feba1e9dcb1c.png">
 
 # 機能一覧
 
