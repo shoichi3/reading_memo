@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   with_options presence: true, format: { with: PASSWORD_REGEX, message: 'Include both letters and numbers' } do
     validates :password
   end
