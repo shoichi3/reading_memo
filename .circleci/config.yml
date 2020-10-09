@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  slack: circleci/slack@4.0
+
 jobs:
   rubocop:
     docker:
@@ -62,6 +65,28 @@ jobs:
       - run:
           name: Rspec
           command: bundle exec rspec
+  
+  notify:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - slack/notify:
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "plain_text",
+                      "text": "*This is a text notification*",
+                      "emoji": true
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always
 
 workflows:
   version: 2
@@ -71,3 +96,7 @@ workflows:
       - rspec:
           requires:
             - rubocop
+  send-notification:
+    jobs:
+      - notify:
+          context: slack-secrets
