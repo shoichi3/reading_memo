@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :check_login
-  before_action :get_title, only: [:show, :edit, :update, :destroy]
+  before_action :title, only: [:show, :edit, :update, :destroy]
 
   def new
     @book = Book.new
@@ -16,7 +16,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    book = Book.find(params[:id])
     @memos = @book.memos.order('created_at DESC').page(params[:page]).per(3)
   end
 
@@ -50,7 +49,7 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title).merge(user_id: current_user.id)
   end
 
-  def get_title
+  def title
     @book = Book.find(params[:id])
   end
 

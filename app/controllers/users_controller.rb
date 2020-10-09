@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :check_login, only: :show
-  before_action :get_current_user, only: [:show]
+  before_action :user, only: :show
 
   def index
     redirect_to user_path(current_user.id) if user_signed_in?
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   private
 
-  def get_current_user
+  def user
     @user = User.find(params[:id])
   end
 

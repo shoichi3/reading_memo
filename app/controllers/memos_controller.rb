@@ -1,7 +1,7 @@
 class MemosController < ApplicationController
   before_action :check_login
-  before_action :get_book, only: [:new, :create, :show, :edit, :update, :destroy]
-  before_action :get_memo, only: [:show, :edit, :update, :destroy]
+  before_action :book, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :memo, only: [:show, :edit, :update, :destroy]
 
   def new
     @book = Book.find(params[:book_id])
@@ -50,11 +50,11 @@ class MemosController < ApplicationController
     params.require(:memo).permit(:image, :memo).merge(user_id: current_user.id, book_id: params[:book_id])
   end
 
-  def get_book
+  def book
     @book = Book.find(params[:book_id])
   end
 
-  def get_memo
+  def memo
     @memo = Memo.find(params[:id])
   end
 
