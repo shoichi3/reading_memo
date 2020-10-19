@@ -13,18 +13,21 @@ readingmemobook.com
 
 - ruby 2.6.5  
 - rails 6.0.0
-- MySql 5.6.47
+- MySql 5.6.47(開発環境)
+- MariaDB(本番環境)
 - Nginx
+- Unicorn
 - Docker
 - CircleCI
 - AWS
   - EC2
   - S3
+  - Route 53
 - Capistrano3
 - RSpec
 
 # AWS構成図
-<img width="852" alt="スクリーンショット 2020-10-09 16 14 23" src="https://user-images.githubusercontent.com/69130053/95555221-6ac4b280-0a4c-11eb-8349-cf0a45124818.png">
+<img width="908" alt="スクリーンショット 2020-10-19 11 54 09" src="https://user-images.githubusercontent.com/69130053/96396312-e0c1da00-1201-11eb-975f-54bf40f18525.png">
 
 # 機能一覧
 
