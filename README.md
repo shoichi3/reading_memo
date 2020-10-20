@@ -18,7 +18,7 @@ http://readingmemobook.com
 - MySql 5.6.47
 - Nginx
 - Unicorn
-- Docker
+- Docker/docker-compose
 - CircleCI
 - AWS
   - EC2
