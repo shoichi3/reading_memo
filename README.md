@@ -13,6 +13,8 @@ http://readingmemobook.com
 
 - ruby 2.6.5  
 - rails 6.0.0
+- HTML
+- CSS
 - MySql 5.6.47
 - Nginx
 - Unicorn
