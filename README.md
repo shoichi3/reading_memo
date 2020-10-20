@@ -6,7 +6,7 @@
 
 # URL
 
-[readingmemobook.com] (url)  
+[http://readingmemobook.com] (url)  
 トップページからログインページへ遷移してください。メールアドレスとパスワードは入力しておりますので、すぐにログインすることができます。
 
 # 使用技術一覧
