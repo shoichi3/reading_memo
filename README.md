@@ -6,15 +6,14 @@
 
 # URL
 
-[http://readingmemobook.com] (url)  
+http://readingmemobook.com  
 トップページからログインページへ遷移してください。メールアドレスとパスワードは入力しておりますので、すぐにログインすることができます。
 
 # 使用技術一覧
 
 - ruby 2.6.5  
 - rails 6.0.0
-- MySql 5.6.47(開発環境)
-- MariaDB(本番環境)
+- MySql 5.6.47
 - Nginx
 - Unicorn
 - Docker
